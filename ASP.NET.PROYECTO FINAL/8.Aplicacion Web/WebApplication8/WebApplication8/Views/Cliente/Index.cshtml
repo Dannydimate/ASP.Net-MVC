@@ -1,0 +1,43 @@
+﻿@using WebApplication8.Models;
+@model List<Cliente>
+
+
+@{
+    ViewData["title"] = "Index";
+}
+
+@if (Model.Count !=0)
+
+{
+    <table class="table table-info">
+        <thead>
+            <tr>
+                <th scope="col">Id</th>
+                <th scope="col">Name</th>
+                <th scope="col">DocumentoI</th>
+                <th scope="col">TipoCliente</th>
+                <th scope="col">SupermercadoId</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var client in Model)
+            {
+                <tr>
+                    <td>@client.Id</td>
+                    <td>@client.Name</td>
+                    <td>@client.DocumentoI</td>
+                    <td>@client.TipoCliente</td>
+                    <td>@client.SupermercadoId</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+}
+else
+{
+    <div class="card">
+        <div class="card-body">
+            No hay datos del cliente
+        </div>
+    </div>
+}

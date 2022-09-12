@@ -1,0 +1,34 @@
+﻿@model Supermercado
+
+@{
+    ViewData["Title"] = "Crear";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="card">
+    <div class="card-header">
+        Crear Supermercado
+    </div>
+    <div class="card-body">
+        <form method="post" asp-controller="Supermercado" asp-action="Crear" class="form-group">
+
+            <div class="mb-3">
+                <label class="form-label">Nombre Supermercado</label>
+                <input asp-for="NameSuper" type="text" class="form-control">
+            </div>
+
+            <div class="mb-3">
+                <label class="form-label">Direccion</label>
+                <input asp-for="Direccion" type="text" class="form-control">
+            </div>
+
+            <div class="mb-3">
+                <label class="form-label">Autoservicio</label>
+                <input asp-for="Autoservicio" type="text" class="form-control">
+            </div>
+
+            <button type="submit" class="btn btn-primary">Crear</button>
+          
+        </form>
+    </div>
+</div>
